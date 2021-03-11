@@ -1,2 +1,2 @@
-# PERSO-02-INTERNSHIP
-This repository is made to develop my own website for my internship searches
+# PERSO-02-PYTHON
+This repository is made to learn Python
