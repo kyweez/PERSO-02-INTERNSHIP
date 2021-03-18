@@ -1,5 +1,4 @@
 from datetime import datetime
-from numpy import printoptions
 from pytz import timezone
 from timezonefinder import TimezoneFinder
 from sunnyday import Weather
