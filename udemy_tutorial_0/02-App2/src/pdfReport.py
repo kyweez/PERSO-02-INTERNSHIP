@@ -1,5 +1,6 @@
 from fpdf import FPDF
 import webbrowser
+import os
 
 class PdfReport:
 
@@ -44,6 +45,9 @@ class PdfReport:
         pdf.cell(w=150, h=25, txt=flatmate2.name , border=0)
         pdf.cell(w=150, h=25, txt=f"{flatmate2_pay} $", border=0, ln=1)
 
+        # Change directory to output
+        os.chdir("../output")
+
         # Generate the PDF file
-        pdf.output(f"../output/{self.filename}.pdf")
-        webbrowser.open(f"../output/{self.filename}.pdf")
+        pdf.output(f"{self.filename}.pdf")
+        webbrowser.open(f"{self.filename}.pdf")
