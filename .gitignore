@@ -350,5 +350,5 @@ MigrationBackup/
 .ionide/
 
 # Python
-venv/
+*/app2_venv/
 vscode/
