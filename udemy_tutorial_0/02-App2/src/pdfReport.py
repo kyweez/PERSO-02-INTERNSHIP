@@ -1,6 +1,10 @@
+import filestack
+from filestack.models.client import Client
 from fpdf import FPDF
 import webbrowser
 import os
+
+from urllib3.util.retry import Retry
 
 class PdfReport:
 
@@ -51,3 +55,14 @@ class PdfReport:
         # Generate the PDF file
         pdf.output(f"{self.filename}.pdf")
         webbrowser.open(f"{self.filename}.pdf")
+
+class FileSharer:
+    
+    def __init__(self, filepath, api_key="API_KEY"):
+        self.filepath = filepath
+        self.api_key = api_key
+    
+    def share(self):
+        client = Client(self.api_key)
+        new_filelink = client.upload(filepath=f"{self.filepath}.pdf")
+        return new_filelink.url
