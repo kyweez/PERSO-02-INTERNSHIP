@@ -5,4 +5,5 @@ the_bill = Bill(120, "March 2021")
 flatmate_john = Flatmate("John", 20)
 flatmate_mary = Flatmate("Mary", 25)
 
-print(flatmate_john.pays(the_bill))
+print("John pays", flatmate_john.pays(the_bill, flatmate_mary))
+print("Mary pays", flatmate_mary.pays(the_bill, flatmate_john))
