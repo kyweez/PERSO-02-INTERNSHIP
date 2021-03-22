@@ -2,12 +2,17 @@ from pdfReport import PdfReport
 from flatmate import Flatmate
 from bill import Bill
 
-the_bill = Bill(120, "March 2021")
-flatmate_john = Flatmate("John", 20)
-flatmate_mary = Flatmate("Mary", 25)
+bill_amount = input("Insert a bill amount : ")
+bill_period = input("Insert a bill period : ")
+first_flatmate = input("Insert the first flatmate name : ")
+first_flatmate_duration = input (f"How long did {first_flatmate} stayed ? ")
+second_flatmate = input("Insert the second flatmate name : ")
+second_flatmate_duration = input (f"How long did {second_flatmate} stayed ? ")
 
-print("John pays", flatmate_john.pays(the_bill, flatmate_mary))
-print("Mary pays", flatmate_mary.pays(the_bill, flatmate_john))
 
-pdf_report = PdfReport("Report.pdf")
+the_bill = Bill(int(bill_amount), bill_period)
+flatmate_john = Flatmate(first_flatmate, int(first_flatmate_duration))
+flatmate_mary = Flatmate(second_flatmate, int(second_flatmate_duration))
+
+pdf_report = PdfReport(bill_period)
 pdf_report.generate(flatmate_john, flatmate_mary, the_bill)
