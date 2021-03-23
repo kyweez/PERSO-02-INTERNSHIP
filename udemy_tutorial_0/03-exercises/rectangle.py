@@ -11,6 +11,9 @@ class Rectangle:
     
     def distance_to_point(self, x, y):
         return ((self.x - x)**2 + (self.y - y)**2)**0.5
+    
+    def time_to_point(self, x, y, speed):
+        return self.distance_to_point(x, y) / speed
 
 new_rectangle = Rectangle(10, 20, 0, 0)
 print(new_rectangle.area())
