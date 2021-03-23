@@ -11,3 +11,6 @@ class Rectangle:
     
     def distance_to_point(self, x, y):
         return ((self.x - x)**2 + (self.y - y)**2)**0.5
+
+new_rectangle = Rectangle(10, 20, 0, 0)
+print(new_rectangle.area())
