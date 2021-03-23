@@ -15,5 +15,8 @@ class Rectangle:
     def time_to_point(self, x, y, speed):
         return self.distance_to_point(x, y) / speed
 
+    def perimeter(self):
+        return (self.width + self.height) * 2
+
 new_rectangle = Rectangle(10, 20, 0, 0)
 print(new_rectangle.area())
