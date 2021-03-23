@@ -18,5 +18,5 @@ class Rectangle:
     def perimeter(self):
         return (self.width + self.height) * 2
 
-new_rectangle = Rectangle(10, 20, 0, 0)
-print(new_rectangle.area())
+new_rectangle = Rectangle(3, 4, 1, 2)
+print(new_rectangle.time_to_point(2, 3, 20))
